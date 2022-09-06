@@ -1,0 +1,230 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 30px;
+  margin: 0 auto; /*выравниваем контейнер по центру */
+}
+
+.title-1 {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block; /* чтоб ширина определялась по контенту внутри */
+  padding: 7px 22px;
+  background-color: #070707;
+  border-radius: 30px;
+
+  font-size: 18px;
+  color: #fff;
+
+  transition: background-color 0.2s ease-in, top 0.2s ease-in; /* добавляем плавности смена цвета при наведении и плавности при нажатии */
+}
+/* Задаём поведение для кнопки по наведению*/
+.btn:hover,
+.btn:focus {
+  background-color: #323232;
+}
+/* Задаём поведение для кнопки по нажатию*/
+.btn:active {
+  position: relative; /* чтоб кнопка проседала по нажатию на 1пх вниз */
+  top: 1px;
+  background-color: #000;
+}
+
+/* header */
+
+.header {
+  padding-top: 46px;
+  background-color: #f1f1f1;
+}
+
+.header-nav {
+  display: flex; /* выравнивает элементы в ряд */
+  justify-content: space-between; /* раскидывает контент по левому и правому краю */
+  align-items: flex-end; /* вертикальное выравниваение */
+  margin-bottom: 76px;
+}
+
+.logo {
+  position: relative;
+  padding-right: 12px;
+  padding-bottom: 3px;
+  /* background-color: aqua; */
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1;
+  color: #000;
+}
+
+/* создаём псевдо элемент для класса лого (для жёлтой точки) */
+.logo::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #fda300;
+  border-radius: 50%;
+}
+
+/* nav */
+
+.nav-list {
+  display: flex;
+  column-gap: 50px; /* расстояние между колонками */
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.nav-button {
+  display: none;
+}
+
+.nav-link {
+  color: #000;
+}
+
+.nav-link.active {
+  color: #606060;
+}
+
+/* header content */
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  margin-bottom: 90px;
+}
+
+.header-content {
+  margin-top: 124px;
+  max-width: 500px;
+}
+
+.header-heading {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 44px;
+}
+
+.header-content p {
+  line-height: 2;
+}
+
+/* Service */
+
+.service {
+  padding: 90px 0;
+}
+
+.services-row {
+  display: flex;
+  column-gap: 30px;
+  row-gap: 60px; /* расстояние между карточками */
+  flex-wrap: wrap; /* карточки могут переносится на следующие ряды */
+}
+
+.service-card {
+  flex: 1 1 0;
+  /* padding-bottom: 90px; */
+  min-width: 315px;
+}
+
+.service-card-img {
+  margin-bottom: 30px;
+}
+
+.service-card-title {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.service-card p {
+  line-height: 2;
+}
+
+/* Portfolio */
+
+.portfolio {
+  margin: 90px 0 0 0;
+  padding: 90px 0;
+  background-color: #f1f1f1;
+}
+
+.portfolio-title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.project {
+  text-align: center;
+}
+
+/* Делаем отступы между проектами */
+
+.project + .project {
+  margin-top: 90px;
+}
+
+.project-img {
+  margin-bottom: 40px;
+}
+
+.project-title {
+  font-size: 18px;
+}
+
+/* задеём ссылке чёрный цвет, вместо синего */
+
+.project-title a {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Footer */
+
+.contacts {
+  padding: 90px 0;
+  text-align: center;
+}
+
+.contacts-title {
+  margin-bottom: 40px;
+}
+
+.contacts-content {
+  /* max-width: 480px; */
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.contacts-button {
+  margin-bottom: 80px;
+}
+
+.contacts-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 60px;
+  margin-bottom: 40px;
+}
+
+.contacts-footer {
+  color: #828282;
+}
